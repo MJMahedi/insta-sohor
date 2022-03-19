@@ -83,7 +83,9 @@
             <p>JavaScript working process : It is single-threaded or that it is using a callback queue.
             It is a Client-side Scripting Language The term .client-side scripting language means that it runs inside the web-browsers, but  client's web-browser also needs to support the JavaScript.It is an interpreted language that means it gets executed in line by line manner.When we run a program , The code is received by the browser's engine and the engine runs the source code to obtain the output . The code is first received by the "parser" inside the JS engine. The parser's job is to check the JavaScript code for syntactic errors in line by line.Then it creates the data structure called AST.Then it converts the code into the machine code.Then converted in  byte code .Then Code run. This is how Jacascript work.</p>
             <p>
-
+                An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty.  The Event Loop is to monitor the Call Stack 
+and the Callback Queue.The call stack is responsible for keeping track of all the operations in line to be executed. Whenever a function is finished, it is popped from the stack. If the call stack is not empty, the event loop waits until it is empty and places the next function from the callback queue to the call stack.
+                The event loop is a process that waits for the Call Stack to be clear before pushing callbacks from the Task Queue to the Call Stack. Once the Stack is clear, the event loop triggers and checks the Task Queue for available callbacks. If there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats the same process.
             </p>
         </section>
         <footer></footer>
